@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecipesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'show']);
+
+Route::get('/recipes/create', [RecipesController::class, 'create']);
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [

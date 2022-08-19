@@ -4,14 +4,14 @@ import Nav from '../Shared/Nav'
 export default function Layout(props) {
   return (
     <>
-    <section className="p-6 bg-gray-200">
-        <header className="flex justify-between">
-            <h1 className="text-lg font-bold">Cookbook</h1>
+    <section className="px-6 py-3 shadow-md">
+        <header className="flex justify-between items-center">
+            <h1 className="text-xl font-bold">Cookbook</h1>
             <Nav />
         </header>
     </section>
     <section className="p-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
             {props.children}
         </div>
     </section>

@@ -1,14 +1,21 @@
 import React from 'react'
-import { usePage } from '@inertiajs/inertia-react'
+import { usePage, Link } from '@inertiajs/inertia-react'
 
 export default function Nav(props) {
     const { nav } = usePage().props
 
   return (
     <nav>
-        <ul className="flex list-none space-x-6">
+        <ul className="flex list-none gap-x-8">
             {nav.map((item, index) =>
-                <li key={index}>{item}</li>
+                <li key={index}>
+                    <Link
+                        href={item.uri}
+                        className={item.classes}
+                    >
+                        {item.name}
+                    </Link>
+                </li>
             )}
         </ul>
     </nav>

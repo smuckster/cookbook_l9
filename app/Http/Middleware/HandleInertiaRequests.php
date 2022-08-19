@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
+use App\Http\Classes\Navigation;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -43,11 +44,7 @@ class HandleInertiaRequests extends Middleware
                     'location' => $request->url(),
                 ]);
             },
-            'nav' => [
-                'Home',
-                'Browse Recipes',
-                'Create Recipe',
-            ],
+            'nav' => Navigation::getNavigationItems(),
         ]);
     }
 }

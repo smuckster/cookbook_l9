@@ -5921,6 +5921,37 @@ function Home(props) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Recipes/Create.jsx":
+/*!***********************************************!*\
+  !*** ./resources/js/Pages/Recipes/Create.jsx ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CreateRecipe)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+/* harmony import */ var _Shared_Forms_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Shared/Forms/CreateRecipe */ "./resources/js/Shared/Forms/CreateRecipe.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function CreateRecipe() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+      className: "font-bold text-3xl mb-4",
+      children: "Create Recipe"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Shared_Forms_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Welcome.jsx":
 /*!****************************************!*\
   !*** ./resources/js/Pages/Welcome.jsx ***!
@@ -6194,6 +6225,280 @@ function Welcome(props) {
 
 /***/ }),
 
+/***/ "./resources/js/Shared/Forms/CreateRecipe.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/Shared/Forms/CreateRecipe.jsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CreateRecipeForm)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _Inputs_TextInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Inputs/TextInput */ "./resources/js/Shared/Forms/Inputs/TextInput.jsx");
+/* harmony import */ var _Inputs_TextArea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Inputs/TextArea */ "./resources/js/Shared/Forms/Inputs/TextArea.jsx");
+/* harmony import */ var _Inputs_IngredientsInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Inputs/IngredientsInput */ "./resources/js/Shared/Forms/Inputs/IngredientsInput.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+function CreateRecipeForm() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    name: '',
+    description: '',
+    "yield": '',
+    time: '',
+    ingredients: ['1 c. flour', '1 c. sugar', '1/2 c. butter', '']
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+
+  function handleInputChange(event) {
+    setValues(_objectSpread(_objectSpread({}, values), {}, _defineProperty({}, event.target.name, event.target.value)));
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(values);
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.post('/recipes', values);
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+    onSubmit: handleSubmit,
+    className: "flex flex-col",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Inputs_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      name: "name",
+      value: values.name,
+      label: "Name",
+      changeHandler: handleInputChange,
+      classes: "w-full"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Inputs_TextArea__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      name: "description",
+      value: values.description,
+      label: "Description",
+      changeHandler: handleInputChange,
+      classes: "w-full",
+      rows: "3"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Inputs_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      name: "yield",
+      value: values["yield"],
+      label: "Yield",
+      changeHandler: handleInputChange,
+      classes: "w-full"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Inputs_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      name: "time",
+      value: values.time,
+      label: "Preparation time",
+      changeHandler: handleInputChange,
+      classes: "w-full"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Inputs_IngredientsInput__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      value: values.ingredients,
+      changeHandler: handleInputChange,
+      classes: "w-full"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "text-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+        type: "submit",
+        className: "bg-rose-500 hover:bg-rose-600 rounded-full text-white font-bold px-5 py-2 mt-4",
+        children: "Submit"
+      })
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Forms/Inputs/IngredientsInput.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/Shared/Forms/Inputs/IngredientsInput.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ IngredientsInput)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextInput */ "./resources/js/Shared/Forms/Inputs/TextInput.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+function IngredientsInput(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(props.value),
+      _useState2 = _slicedToArray(_useState, 2),
+      ingredients = _useState2[0],
+      setIngredients = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentlyEditing = _useState4[0],
+      setCurrentlyEditing = _useState4[1];
+
+  function handleChange(event) {
+    setCurrentlyEditing(event.target.dataset.index); // Make an editable copy of the ingredients in state.
+
+    var newIngredients = ingredients; // If the updated ingredient has an index, update it:
+
+    if (event.target.dataset.index !== undefined) {
+      newIngredients[event.target.dataset.index] = event.target.value;
+    } // Save the new ingredients array in state.
+
+
+    setIngredients(newIngredients); // Call the parent component's change handler with the updated ingredients array.
+
+    props.changeHandler({
+      target: {
+        name: "ingredients",
+        value: ingredients
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "mb-5",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+      htmlFor: "ingredients",
+      className: "block font-bold text-lg",
+      children: "Ingredients"
+    }), props.value.map(function (ingredient, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        name: "ingredients[]",
+        "data-index": index,
+        type: "text",
+        onChange: handleChange,
+        value: ingredient,
+        className: "rounded-md focus:border-2 mb-3 ".concat(props.classes),
+        size: props.size
+      }, index);
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      name: "ingredients[]",
+      "data-index": ingredients.length,
+      type: "text",
+      onChange: handleChange,
+      value: "",
+      className: "rounded-md focus:border-2 mb-3 ".concat(props.classes),
+      size: props.size
+    }, ingredients.length)]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Forms/Inputs/TextArea.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/Shared/Forms/Inputs/TextArea.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ TextArea)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function TextArea(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "mb-5",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+      htmlFor: props.name,
+      className: "block font-bold text-lg",
+      children: props.label
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
+      id: props.name,
+      name: props.name,
+      onChange: props.changeHandler,
+      value: props.title,
+      className: "rounded-md focus:border-2 ".concat(props.classes),
+      rows: props.rows,
+      cols: props.cols
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Forms/Inputs/TextInput.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/Shared/Forms/Inputs/TextInput.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ TextInput)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function TextInput(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "mb-5",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+      htmlFor: props.name,
+      className: "block font-bold text-lg",
+      children: props.label
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+      id: props.name,
+      name: props.name,
+      type: "text",
+      onChange: props.changeHandler,
+      value: props.title,
+      className: "rounded-md focus:border-2 ".concat(props.classes),
+      size: props.size
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Shared/Layout.jsx":
 /*!****************************************!*\
   !*** ./resources/js/Shared/Layout.jsx ***!
@@ -6216,18 +6521,18 @@ __webpack_require__.r(__webpack_exports__);
 function Layout(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
-      className: "p-6 bg-gray-200",
+      className: "px-6 py-3 shadow-md",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("header", {
-        className: "flex justify-between",
+        className: "flex justify-between items-center",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-          className: "text-lg font-bold",
+          className: "text-xl font-bold",
           children: "Cookbook"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Shared_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
       className: "p-6",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "max-w-3xl mx-auto",
+        className: "max-w-2xl mx-auto",
         children: props.children
       })
     })]
@@ -6257,10 +6562,14 @@ function Nav(props) {
   var nav = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.nav;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
-      className: "flex list-none space-x-6",
+      className: "flex list-none gap-x-8",
       children: nav.map(function (item, index) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: item
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+            href: item.uri,
+            className: item.classes,
+            children: item.name
+          })
         }, index);
       })
     })
@@ -61617,6 +61926,8 @@ var map = {
 	"./Dashboard.jsx": "./resources/js/Pages/Dashboard.jsx",
 	"./Home": "./resources/js/Pages/Home.jsx",
 	"./Home.jsx": "./resources/js/Pages/Home.jsx",
+	"./Recipes/Create": "./resources/js/Pages/Recipes/Create.jsx",
+	"./Recipes/Create.jsx": "./resources/js/Pages/Recipes/Create.jsx",
 	"./Welcome": "./resources/js/Pages/Welcome.jsx",
 	"./Welcome.jsx": "./resources/js/Pages/Welcome.jsx"
 };
