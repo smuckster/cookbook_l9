@@ -20,6 +20,9 @@ use App\Http\Controllers\RecipesController;
 Route::get('/', [HomeController::class, 'show']);
 
 Route::get('/recipes/create', [RecipesController::class, 'create']);
+Route::post('/recipes', [RecipesController::class, 'store']);
+Route::get('/recipes', [RecipesController::class, 'index']);
+Route::get('/recipes/{recipe:slug}', [RecipesController::class, 'show']);
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [

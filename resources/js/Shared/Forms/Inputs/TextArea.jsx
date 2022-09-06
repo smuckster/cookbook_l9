@@ -9,7 +9,7 @@ export default function TextArea(props) {
             id={props.name}
             name={props.name}
             onChange={props.changeHandler}
-            value={props.title}
+            value={props.value}
             className={`rounded-md focus:border-2 ${props.classes}`}
             rows={props.rows}
             cols={props.cols}

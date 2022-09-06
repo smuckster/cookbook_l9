@@ -22,7 +22,8 @@ return new class extends Migration
             $table->json('ingredients');
             $table->json('steps');
             $table->json('notes')->nullable();
-            $table->tinyText('slug');
+            $table->text('picture')->nullable();
+            $table->tinyText('slug')->unique()->nullable();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });

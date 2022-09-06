@@ -1,29 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react'
-import TextInput from './TextInput'
+import React from 'react'
 
 export default function IngredientsInput(props) {
-    const [ingredients, setIngredients] = useState(props.value);
-    const [currentlyEditing, setCurrentlyEditing] = useState(null);
-
     function handleChange(event) {
-        setCurrentlyEditing(event.target.dataset.index);
+        // Reverse the array and loop through it.
+        let reversedIngredients = props.value.reverse();
+        reversedIngredients.every((ingredient, index, array) => {
+            // If the step is empty, remove it from the array.
+            if (ingredient === '') {
+                array = reversedIngredients.splice(index, 1);
+            } else {
+                // As soon as we encounter a non-empty item, break the loop.
+                return false;
+            }
+        });
+        let newIngredients = reversedIngredients.reverse();
 
-        // Make an editable copy of the ingredients in state.
-        let newIngredients = ingredients;
-
-        // If the updated ingredient has an index, update it:
-        if (event.target.dataset.index !== undefined) {
-            newIngredients[event.target.dataset.index] = event.target.value;
-        }
-
-        // Save the new ingredients array in state.
-        setIngredients(newIngredients);
+        // Update the ingredients based on the index of the changed ingredient.
+        newIngredients[event.target.dataset.index] = event.target.value;
 
         // Call the parent component's change handler with the updated ingredients array.
         props.changeHandler({
             target: {
                 name: "ingredients",
-                value: ingredients
+                value: [...newIngredients, '']
             }
         });
     }
@@ -43,18 +42,6 @@ export default function IngredientsInput(props) {
                     size={props.size}
                 />
             )}
-
-            {/* Create a blank input at the end so the user always has one to tab into. */}
-            <input
-                name="ingredients[]"
-                data-index={ingredients.length}
-                key={ingredients.length}
-                type="text"
-                onChange={handleChange}
-                value=""
-                className={`rounded-md focus:border-2 mb-3 ${props.classes}`}
-                size={props.size}
-            />
         </div>
     )
 }

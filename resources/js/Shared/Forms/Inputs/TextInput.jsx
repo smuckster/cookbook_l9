@@ -10,7 +10,7 @@ export default function TextInput(props) {
             name={props.name}
             type="text"
             onChange={props.changeHandler}
-            value={props.title}
+            value={props.value}
             className={`rounded-md focus:border-2 ${props.classes}`}
             size={props.size}
         />
